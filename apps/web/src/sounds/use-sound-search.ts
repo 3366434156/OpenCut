@@ -68,7 +68,7 @@ export function useSoundSearch({
 			}
 		} catch (err) {
 			setSearchError({
-				error: err instanceof Error ? err.message : "Load more failed",
+				error: err instanceof Error ? err.message : "加载更多失败",
 			});
 		} finally {
 			setLoadingMore({ loading: false });
@@ -114,7 +114,7 @@ export function useSoundSearch({
 			} catch (err) {
 				if (!ignore) {
 					setSearchError({
-						error: err instanceof Error ? err.message : "Search failed",
+						error: err instanceof Error ? err.message : "搜索失败",
 					});
 				}
 			} finally {

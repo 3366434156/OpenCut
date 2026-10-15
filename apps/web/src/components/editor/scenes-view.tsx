@@ -71,7 +71,7 @@ export function ScenesView({ children }: { children: React.ReactNode }) {
 
 			const { canDelete, reason } = canDeleteScene({ scene });
 			if (!canDelete) {
-				toast.error(reason || "Failed to delete scene");
+				toast.error(reason || "删除场景失败");
 				continue;
 			}
 
@@ -96,12 +96,12 @@ export function ScenesView({ children }: { children: React.ReactNode }) {
 			<SheetContent>
 				<SheetHeader>
 					<SheetTitle>
-						{isSelectMode ? `Select scenes (${selectedScenes.size})` : "Scenes"}
+						{isSelectMode ? `选择场景（${selectedScenes.size}）` : "场景"}
 					</SheetTitle>
 					<SheetDescription>
 						{isSelectMode
-							? "Select scenes to delete"
-							: "Switch between scenes in your project"}
+							? "选择要删除的场景"
+							: "在项目的多个场景之间切换"}
 					</SheetDescription>
 				</SheetHeader>
 				<div className="flex flex-col gap-4 py-4">
@@ -136,7 +136,7 @@ export function ScenesView({ children }: { children: React.ReactNode }) {
 					</div>
 					{scenes.length === 0 ? (
 						<div className="text-muted-foreground text-sm">
-							No scenes available
+							暂无可用场景
 						</div>
 					) : (
 						<div className="space-y-2">
@@ -195,7 +195,7 @@ function DeleteDialog({
 			<DialogTrigger asChild>{trigger}</DialogTrigger>
 			<DialogContent>
 				<DialogHeader>
-					<DialogTitle>Delete Scenes</DialogTitle>
+					<DialogTitle>删除场景</DialogTitle>
 					<DialogDescription>
 						Are you sure you want to delete {count} scene
 						{count === 1 ? "" : "s"}? This action cannot be undone.

@@ -46,7 +46,7 @@ interface AssetSection {
 
 const ASSET_SECTIONS: AssetSection[] = [
 	{
-		title: "Symbol",
+		title: "图形标志",
 		description:
 			"Use the symbol on its own when the OpenCut name is already present nearby or space is limited.",
 		cols: "2",
@@ -54,21 +54,21 @@ const ASSET_SECTIONS: AssetSection[] = [
 			{
 				src: "/logos/opencut/symbol.svg",
 				theme: "dark",
-				label: "Symbol",
+				label: "图形标志",
 				width: 400,
 				height: 400,
 			},
 			{
 				src: "/logos/opencut/symbol-light.svg",
 				theme: "light",
-				label: "Symbol",
+				label: "图形标志",
 				width: 400,
 				height: 400,
 			},
 		],
 	},
 	{
-		title: "Lockup",
+		title: "组合标志",
 		description:
 			"The full lockup combines the symbol and wordmark. Prefer this in most contexts where you have enough horizontal space.",
 		cols: "2",
@@ -76,14 +76,14 @@ const ASSET_SECTIONS: AssetSection[] = [
 			{
 				src: "/logos/opencut/logo.svg",
 				theme: "dark",
-				label: "Logo",
+				label: "标志",
 				width: 1809,
 				height: 400,
 			},
 			{
 				src: "/logos/opencut/logo-light.svg",
 				theme: "light",
-				label: "Logo",
+				label: "标志",
 				width: 1809,
 				height: 400,
 			},
@@ -109,7 +109,7 @@ export default function BrandPage() {
 	return (
 		<BasePage
 			maxWidth="6xl"
-			title="Brand"
+			title="品牌"
 			description={
 				<>
 					Download OpenCut brand assets for use in your projects.{" "}
@@ -122,7 +122,7 @@ export default function BrandPage() {
 								?.scrollIntoView({ behavior: "smooth" })
 						}
 					>
-						Read the brand guidelines.
+						阅读品牌使用规范。
 					</Link>
 				</>
 			}
@@ -138,7 +138,7 @@ export default function BrandPage() {
 					}}
 				>
 					<Download />
-					Download all
+					下载全部
 				</Button>
 			}
 		>
@@ -171,14 +171,14 @@ export default function BrandPage() {
 
 			<div id="guidelines" className="flex flex-col gap-8 text-sm">
 				<div className="flex flex-col gap-3">
-					<h2 className="font-semibold text-lg">Usage</h2>
+					<h2 className="font-semibold text-lg">使用规范</h2>
 					<p className="text-muted-foreground text-base leading-relaxed">
-						OpenCut is open source — the code is free to use under its license.
-						That license does not cover the name or logo. You can say you use
-						OpenCut, that your project integrates with OpenCut, or that it was
-						built on top of OpenCut. You cannot name your product OpenCut, imply
-						we made or endorse your product, or use the marks commercially
-						without asking first. For anything unclear, reach out at{" "}
+						OpenCut 是开源的 —— 代码在其许可证下可自由使用。
+						但该许可证不涵盖名称和标志。你可以说你使用了
+						OpenCut、你的项目集成了 OpenCut，或者说它是
+						基于 OpenCut 构建的。但你不能把自己的产品命名为 OpenCut，也不能暗示
+						是我们制作或认可了你的产品，未经许可也不得将标志用于商业用途。
+						如有疑问，请联系{" "}
 						<Link
 							href="mailto:brand@opencut.app"
 							className="underline underline-offset-4"
@@ -190,7 +190,7 @@ export default function BrandPage() {
 				</div>
 
 				<div className="flex flex-col gap-3">
-					<h2 className="font-semibold text-lg">What&apos;s not allowed</h2>
+					<h2 className="font-semibold text-lg">禁止行为</h2>
 					<ul className="text-muted-foreground text-base flex flex-col gap-2 leading-relaxed">
 						{[
 							"Using OpenCut in the name of your product, service, or domain.",

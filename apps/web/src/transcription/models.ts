@@ -6,27 +6,27 @@ import type {
 export const TRANSCRIPTION_MODELS: TranscriptionModel[] = [
 	{
 		id: "whisper-tiny",
-		name: "Tiny",
+		name: "极小",
 		huggingFaceId: "onnx-community/whisper-tiny",
-		description: "Fastest, lower accuracy",
+		description: "速度最快，准确度较低",
 	},
 	{
 		id: "whisper-small",
-		name: "Small",
+		name: "小",
 		huggingFaceId: "onnx-community/whisper-small",
-		description: "Good balance of speed and accuracy",
+		description: "速度与准确度平衡",
 	},
 	{
 		id: "whisper-medium",
-		name: "Medium",
+		name: "中",
 		huggingFaceId: "onnx-community/whisper-medium",
-		description: "Higher accuracy, slower",
+		description: "准确度更高，速度较慢",
 	},
 	{
 		id: "whisper-large-v3-turbo",
-		name: "Large v3 Turbo",
+		name: "大 v3 Turbo",
 		huggingFaceId: "onnx-community/whisper-large-v3-turbo",
-		description: "Best accuracy, requires WebGPU for good performance",
+		description: "准确度最佳，需要 WebGPU 才能获得良好性能",
 	},
 ];
 

@@ -9,11 +9,11 @@ import { LinkSquare02Icon } from "@hugeicons/core-free-icons";
 import { cn } from "@/utils/ui";
 
 export const metadata: Metadata = {
-	title: "Sponsors - OpenCut",
+	title: "赞助商 - OpenCut",
 	description:
 		"Support OpenCut and help us build the future of free and open-source video editing.",
 	openGraph: {
-		title: "Sponsors - OpenCut",
+		title: "赞助商 - OpenCut",
 		description:
 			"Support OpenCut and help us build the future of free and open-source video editing.",
 		type: "website",
@@ -25,11 +25,10 @@ export default function SponsorsPage() {
 		<BasePage>
 			<div className="flex flex-col gap-8 text-center">
 				<h1 className="text-5xl font-bold tracking-tight md:text-6xl">
-					Sponsors
+					赞助商
 				</h1>
 				<p className="text-muted-foreground mx-auto max-w-2xl text-xl leading-relaxed text-pretty">
-					Support OpenCut and help us build the future of privacy-first video
-					editing.
+					支持 OpenCut，与我们一起打造隐私优先的视频剪辑。
 				</p>
 			</div>
 			<SponsorsGrid />

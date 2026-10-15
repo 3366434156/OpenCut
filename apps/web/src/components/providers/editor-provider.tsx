@@ -57,7 +57,7 @@ export function EditorProvider({ projectId, children }: EditorProviderProps) {
 				if (isNotFound) {
 					try {
 						const newProjectId = await editor.project.createNewProject({
-							name: "Untitled Project",
+							name: "未命名项目",
 						});
 						router.replace(`/editor/${newProjectId}`);
 					} catch (_createErr) {
@@ -72,7 +72,7 @@ export function EditorProvider({ projectId, children }: EditorProviderProps) {
 						setError(wasmPanic);
 					} else {
 						setError(
-							err instanceof Error ? err.message : "Failed to load project",
+							err instanceof Error ? err.message : "加载项目失败",
 						);
 					}
 					setIsLoading(false);
@@ -102,7 +102,7 @@ export function EditorProvider({ projectId, children }: EditorProviderProps) {
 			<div className="bg-background flex h-screen w-screen items-center justify-center">
 				<div className="flex flex-col items-center gap-4">
 					<Loader2 className="text-muted-foreground size-8 animate-spin" />
-					<p className="text-muted-foreground text-sm">Loading project...</p>
+					<p className="text-muted-foreground text-sm">正在加载项目...</p>
 				</div>
 			</div>
 		);
@@ -113,7 +113,7 @@ export function EditorProvider({ projectId, children }: EditorProviderProps) {
 			<div className="bg-background flex h-screen w-screen items-center justify-center">
 				<div className="flex flex-col items-center gap-4">
 					<Loader2 className="text-muted-foreground size-8 animate-spin" />
-					<p className="text-muted-foreground text-sm">Exiting project...</p>
+					<p className="text-muted-foreground text-sm">正在退出项目...</p>
 				</div>
 			</div>
 		);

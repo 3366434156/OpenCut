@@ -7,11 +7,11 @@ import { EXTERNAL_TOOLS } from "@/site/external-tools";
 import { BasePage } from "../base-page";
 
 export const metadata: Metadata = {
-	title: "Contributors - OpenCut",
+	title: "贡献者 - OpenCut",
 	description:
 		"Meet the amazing people who contribute to OpenCut, the free and open-source video editor.",
 	openGraph: {
-		title: "Contributors - OpenCut",
+		title: "贡献者 - OpenCut",
 		description:
 			"Meet the amazing people who contribute to OpenCut, the free and open-source video editor.",
 		type: "website",
@@ -69,8 +69,8 @@ export default async function ContributorsPage() {
 
 	return (
 		<BasePage
-			title="Contributors"
-			description="Meet the amazing people who contribute to OpenCut, the free and open-source video editor."
+			title="贡献者"
+			description="认识这些为 OpenCut 做出贡献的优秀贡献者，这是一款免费开源的视频剪辑器。"
 		>
 			<div className="-mt-4 flex items-center justify-center gap-8 text-sm">
 				<StatItem value={contributors.length} label="contributors" />
@@ -86,7 +86,7 @@ export default async function ContributorsPage() {
 				)}
 				<ExternalToolsSection />
 				<GitHubContributeSection
-					title="Join the community"
+					title="加入社区"
 					description="OpenCut is built by developers like you. Every contribution, no matter how small, helps make video editing more accessible for everyone."
 				/>
 			</div>
@@ -112,9 +112,9 @@ function TopContributorsSection({
 	return (
 		<div className="flex flex-col gap-10">
 			<div className="flex flex-col gap-2 text-center">
-				<h2 className="text-2xl font-semibold">Top contributors</h2>
+				<h2 className="text-2xl font-semibold">主要贡献者</h2>
 				<p className="text-muted-foreground">
-					Leading the way in contributions
+					贡献榜的领跑者
 				</p>
 			</div>
 
@@ -167,9 +167,9 @@ function AllContributorsSection({
 	return (
 		<div className="flex flex-col gap-12">
 			<div className="flex flex-col gap-2 text-center">
-				<h2 className="text-2xl font-semibold">All contributors</h2>
+				<h2 className="text-2xl font-semibold">全部贡献者</h2>
 				<p className="text-muted-foreground">
-					Everyone who makes OpenCut better
+					每一位让 OpenCut 变得更好的人
 				</p>
 			</div>
 
@@ -210,8 +210,8 @@ function ExternalToolsSection() {
 	return (
 		<div className="flex flex-col gap-10">
 			<div className="flex flex-col gap-2 text-center">
-				<h2 className="text-2xl font-semibold">External tools</h2>
-				<p className="text-muted-foreground">Tools we use to build OpenCut</p>
+				<h2 className="text-2xl font-semibold">外部工具</h2>
+				<p className="text-muted-foreground">我们用来构建 OpenCut 的工具</p>
 			</div>
 
 			<div className="mx-auto grid max-w-4xl grid-cols-1 gap-6 sm:grid-cols-2">

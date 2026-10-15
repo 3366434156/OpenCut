@@ -34,17 +34,17 @@ export async function showMediaUploadToast<T extends MediaUploadToastResult>({
 			if (uploadedCount === 1) {
 				const assetName = assetNames?.[0];
 				return assetName
-					? `${assetName} has been uploaded`
+					? `${assetName} 已上传`
 					: "1 media asset has been uploaded";
 			}
 
 			if (uploadedCount > 1) {
-				return `${uploadedCount} media assets have been uploaded`;
+				return `已上传 ${uploadedCount} 个媒体素材`;
 			}
 
 			return "No media assets were uploaded";
 		},
-		error: `Failed to upload ${getAssetLabel({ count: filesCount })}`,
+		error: `${getAssetLabel({ count: filesCount })}上传失败`,
 	});
 
 	return toastPromise.unwrap();

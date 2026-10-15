@@ -73,7 +73,7 @@ export class RendererManager {
 			console.error("Copy snapshot failed:", error);
 			return {
 				success: false,
-				error: error instanceof Error ? error.message : "Unknown error",
+				error: error instanceof Error ? error.message : "未知错误",
 			};
 		}
 	}
@@ -133,7 +133,7 @@ export class RendererManager {
 			console.error("Snapshot capture failed:", error);
 			return {
 				success: false,
-				error: error instanceof Error ? error.message : "Unknown error",
+				error: error instanceof Error ? error.message : "未知错误",
 			};
 		}
 	}
@@ -234,7 +234,7 @@ export class RendererManager {
 			console.error("Export failed:", error);
 			return {
 				success: false,
-				error: error instanceof Error ? error.message : "Unknown export error",
+				error: error instanceof Error ? error.message : "未知导出错误",
 			};
 		}
 	}

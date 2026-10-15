@@ -20,8 +20,8 @@ export function MigrationDialog() {
 		? "Updating project"
 		: "Updating projects";
 	const description = migrationState.projectName
-		? `Upgrading "${migrationState.projectName}" from v${migrationState.fromVersion} to v${migrationState.toVersion}`
-		: `Upgrading projects from v${migrationState.fromVersion} to v${migrationState.toVersion}`;
+		? `正在把「${migrationState.projectName}」从 v${migrationState.fromVersion} 升级到 v${migrationState.toVersion}`
+		: `正在把项目从 v${migrationState.fromVersion} 升级到 v${migrationState.toVersion}`;
 
 	return (
 		<Dialog open={true}>

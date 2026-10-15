@@ -118,7 +118,7 @@ export class StorageQuotaExceededError extends Error {
 
 	constructor({ requiredBytes }: { requiredBytes: number }) {
 		super(
-			`Not enough browser storage to save a ${formatStorageBytes({ bytes: requiredBytes })} file.`,
+			`浏览器存储空间不足，无法保存大小为 ${formatStorageBytes({ bytes: requiredBytes })} 的文件。`,
 		);
 
 		this.name = "StorageQuotaExceededError";

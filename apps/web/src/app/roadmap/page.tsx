@@ -22,66 +22,66 @@ interface RoadmapItem {
 
 const roadmapItems: RoadmapItem[] = [
 	{
-		title: "Start",
+		title: "起点",
 		description:
 			"This is where it all started. Repository created, initial project structure, and the vision for a free, open-source video editor. [Check out the first tweet](https://x.com/mazeincoding/status/1936706642512388188) to see where it started.",
 		status: {
-			text: "Completed",
+			text: "已完成",
 			type: "complete",
 		},
 	},
 	{
-		title: "Core UI",
+		title: "核心界面",
 		description:
 			"Build the foundation - main layout, header, sidebar, timeline container, and basic component structure. Not all functionality yet, but the UI framework that everything else builds on.",
 		status: {
-			text: "Completed",
+			text: "已完成",
 			type: "complete",
 		},
 	},
 	{
-		title: "Essential functionality",
+		title: "核心功能",
 		description:
 			"Everything that makes a video editor **useful**. Timeline interactivity, storage, effects, transitions, etc.",
 		status: {
-			text: "In progress",
+			text: "进行中",
 			type: "pending",
 		},
 	},
 	{
-		title: "Native app (mobile/desktop)",
+		title: "原生应用（移动端/桌面端）",
 		description:
 			"Native OpenCut apps for Mac, Windows, Linux, and iOS/Android.",
 		status: {
-			text: "Not started",
+			text: "未开始",
 			type: "default",
 		},
 	},
 ];
 
 export const metadata: Metadata = {
-	title: "Roadmap - OpenCut",
+	title: "路线图 - OpenCut",
 	description:
-		"See what's coming next for OpenCut - the free, open-source video editor that respects your privacy.",
+		"看看 OpenCut 接下来会带来什么 —— 一款尊重你隐私的免费开源视频剪辑器。",
 	openGraph: {
-		title: "OpenCut Roadmap - What's Coming Next",
+		title: "OpenCut 路线图 - 接下来会做什么",
 		description:
-			"See what's coming next for OpenCut - the free, open-source video editor that respects your privacy.",
+			"看看 OpenCut 接下来会带来什么 —— 一款尊重你隐私的免费开源视频剪辑器。",
 		type: "website",
 		images: [
 			{
 				url: "/open-graph/roadmap.jpg",
 				width: 1200,
 				height: 630,
-				alt: "OpenCut Roadmap",
+				alt: "OpenCut 路线图",
 			},
 		],
 	},
 	twitter: {
 		card: "summary_large_image",
-		title: "OpenCut Roadmap - What's Coming Next",
+		title: "OpenCut 路线图 - 接下来会做什么",
 		description:
-			"See what's coming next for OpenCut - the free, open-source video editor that respects your privacy.",
+			"看看 OpenCut 接下来会带来什么 —— 一款尊重你隐私的免费开源视频剪辑器。",
 		images: ["/open-graph/roadmap.jpg"],
 	},
 };
@@ -89,8 +89,8 @@ export const metadata: Metadata = {
 export default function RoadmapPage() {
 	return (
 		<BasePage
-			title="Roadmap"
-			description={`What's coming next for OpenCut (last updated: ${LAST_UPDATED})`}
+			title="路线图"
+			description={`OpenCut 接下来会带来什么（最后更新：${LAST_UPDATED}）`}
 		>
 			<div className="mx-auto flex max-w-4xl flex-col gap-16">
 				<div className="flex flex-col gap-6">
@@ -99,7 +99,7 @@ export default function RoadmapPage() {
 					))}
 				</div>
 				<GitHubContributeSection
-					title="Want to help?"
+					title="想参与贡献？"
 					description="OpenCut is open source and built by the community. Every contribution,
           no matter how small, helps us build the best free video editor
           possible."

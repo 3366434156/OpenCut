@@ -14,23 +14,22 @@ export function Hero() {
 				src="/landing-page-dark.png"
 				height={1903.5}
 				width={1269}
-				alt="OpenCut video editor landing page background"
+				alt="OpenCut 视频剪辑器落地页背景"
 			/>
 			<div className="mx-auto flex w-full max-w-3xl flex-1 flex-col justify-center">
 				<div className="inline-block text-4xl font-bold tracking-tighter md:text-[4rem]">
-					<h1>The open source</h1>
-					<Handlebars>Video editor</Handlebars>
+					<h1>开源</h1>
+					<Handlebars>视频剪辑器</Handlebars>
 				</div>
 
 				<p className="text-muted-foreground mx-auto mt-10 max-w-xl text-base font-light tracking-wide sm:text-xl">
-					A simple but powerful video editor that gets the job done. Works on
-					any platform.
+					一款简单而强大的视频剪辑器，轻松搞定剪辑，支持任何平台。
 				</p>
 
 				<div className="mt-8 flex justify-center gap-8">
 					<Link href="/projects">
 						<Button type="submit" size="lg" className="h-11 text-base">
-							Try early beta
+							体验早期测试版
 							<ArrowRight className="ml-0.5" />
 						</Button>
 					</Link>

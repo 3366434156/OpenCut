@@ -44,10 +44,10 @@ export function Onboarding() {
 				return (
 					<div className="space-y-5">
 						<div className="space-y-3">
-							<Title title="Welcome to OpenCut Beta! 🎉" />
-							<Description description="You're among the first to try OpenCut - the fully open source CapCut alternative." />
+							<Title title="欢迎使用 OpenCut Beta！🎉" />
+							<Description description="你是最早一批体验 OpenCut 的用户之一 —— 完全开源的 CapCut 替代品。" />
 						</div>
-						<NextButton onClick={handleNext}>Next</NextButton>
+						<NextButton onClick={handleNext}>下一步</NextButton>
 					</div>
 				);
 			case 1:
@@ -55,11 +55,11 @@ export function Onboarding() {
 					<div className="space-y-5">
 						<div className="space-y-3">
 							<Title title={getStepTitle()} />
-							<Description description="There's still a ton of things to do to make this editor amazing." />
-							<Description description="A lot of features are still missing. We're working hard to build them out!" />
-							<Description description="If you're curious, check out our roadmap [here](https://opencut.app/roadmap)" />
+							<Description description="要把这个编辑器做到足够好用，还有很多事情要做。" />
+							<Description description="还有不少功能尚未完成，我们正在努力把它们做出来！" />
+							<Description description="想了解更多的话，可以看看我们的[路线图](https://opencut.app/roadmap)" />
 						</div>
-						<NextButton onClick={handleNext}>Next</NextButton>
+						<NextButton onClick={handleNext}>下一步</NextButton>
 					</div>
 				);
 			case 2:
@@ -68,10 +68,10 @@ export function Onboarding() {
 						<div className="space-y-3">
 							<Title title={getStepTitle()} />
 							<Description
-								description={`Join our [Discord](${SOCIAL_LINKS.discord}), chat with cool people and share feedback to help make OpenCut the best editor ever.`}
+								description={`加入我们的 [Discord](${SOCIAL_LINKS.discord})，和有趣的人聊聊，分享你的反馈，一起把 OpenCut 做成最好的编辑器。`}
 							/>
 						</div>
-						<NextButton onClick={handleClose}>Finish</NextButton>
+						<NextButton onClick={handleClose}>完成</NextButton>
 					</div>
 				);
 			default:

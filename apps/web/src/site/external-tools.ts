@@ -17,7 +17,7 @@ export const EXTERNAL_TOOLS: ExternalTool[] = [
 	},
 	{
 		name: "Databuddy",
-		description: "GDPR compliant analytics and user insights for OpenCut",
+		description: "符合 GDPR 的分析与用户洞察服务，为 OpenCut 而设。",
 		url: "https://databuddy.cc?utm_source=opencut",
 		icon: OcDataBuddyIcon,
 	},

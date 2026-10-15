@@ -14,25 +14,25 @@ import {
 } from "@/changelog/components/release";
 
 export const metadata: Metadata = {
-	title: "Changelog - OpenCut",
-	description: "What's new in OpenCut",
+	title: "更新日志 - OpenCut",
+	description: "OpenCut 有什么新变化",
 	openGraph: {
-		title: "Changelog - OpenCut",
-		description: "Every update, improvement, and fix to OpenCut — documented.",
+		title: "更新日志 - OpenCut",
+		description: "OpenCut 的每一次更新、每一项改进与修复，都记录在案。",
 		type: "website",
 		images: [
 			{
 				url: "/open-graph/changlog.jpg",
 				width: 1200,
 				height: 630,
-				alt: "OpenCut Changelog",
+				alt: "OpenCut 更新日志",
 			},
 		],
 	},
 	twitter: {
 		card: "summary_large_image",
-		title: "Changelog - OpenCut",
-		description: "What's new in OpenCut",
+		title: "更新日志 - OpenCut",
+		description: "OpenCut 有什么新变化",
 		images: ["/open-graph/changlog.jpg"],
 	},
 };
@@ -41,7 +41,7 @@ export default function ChangelogPage() {
 	const releases = getSortedReleases();
 
 	return (
-		<BasePage title="Changelog" description="See what's new in OpenCut">
+		<BasePage title="更新日志" description="看看 OpenCut 有什么新变化">
 			<div className="mx-auto w-full max-w-3xl">
 				<div className="relative">
 					<div

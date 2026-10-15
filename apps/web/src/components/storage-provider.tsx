@@ -67,7 +67,7 @@ export function StorageProvider({ children }: StorageProviderProps) {
 					isInitialized: false,
 					isLoading: false,
 					hasSupport: storageService.isFullySupported(),
-					error: error instanceof Error ? error.message : "Unknown error",
+					error: error instanceof Error ? error.message : "未知错误",
 				});
 			}
 		};
