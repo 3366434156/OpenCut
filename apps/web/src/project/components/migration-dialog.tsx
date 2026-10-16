@@ -1,0 +1,44 @@
+"use client";
+
+import {
+	Dialog,
+	DialogContent,
+	DialogDescription,
+	DialogHeader,
+	DialogTitle,
+} from "@/components/ui/dialog";
+import { useEditor } from "@/editor/use-editor";
+import { Loader2 } from "lucide-react";
+
+export function MigrationDialog() {
+	const editor = useEditor();
+	const migrationState = editor.project.getMigrationState();
+
+	if (!migrationState.isMigrating) return null;
+
+	const title = migrationState.projectName
+		? "Updating project"
+		: "Updating projects";
+	const description = migrationState.projectName
+		? `正在把「${migrationState.projectName}」从 v${migrationState.fromVersion} 升级到 v${migrationState.toVersion}`
+		: `正在把项目从 v${migrationState.fromVersion} 升级到 v${migrationState.toVersion}`;
+
+	return (
+		<Dialog open={true}>
+			<DialogContent
+				className="sm:max-w-md"
+				onPointerDownOutside={(event) => event.preventDefault()}
+				onEscapeKeyDown={(event) => event.preventDefault()}
+			>
+				<DialogHeader>
+					<DialogTitle>{title}</DialogTitle>
+					<DialogDescription>{description}</DialogDescription>
+				</DialogHeader>
+
+				<div className="flex items-center justify-center py-4">
+					<Loader2 className="text-muted-foreground size-8 animate-spin" />
+				</div>
+			</DialogContent>
+		</Dialog>
+	);
+}
