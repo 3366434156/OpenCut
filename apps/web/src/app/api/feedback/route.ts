@@ -6,14 +6,14 @@ import { submitFeedback, MAX_MESSAGE_LENGTH } from "@/feedback";
 const submitSchema = z.object({
 	message: z
 		.string()
-		.min(1, "Message is required")
-		.max(MAX_MESSAGE_LENGTH, "Message too long"),
+		.min(1, "消息不能为空")
+		.max(MAX_MESSAGE_LENGTH, "消息过长"),
 });
 
 export async function POST(request: NextRequest) {
 	const { limited } = await checkRateLimit({ request });
 	if (limited) {
-		return NextResponse.json({ error: "Too many requests" }, { status: 429 });
+		return NextResponse.json({ error: "请求过于频繁" }, { status: 429 });
 	}
 
 	const body = await request.json();
@@ -21,7 +21,7 @@ export async function POST(request: NextRequest) {
 
 	if (!result.success) {
 		return NextResponse.json(
-			{ error: "Invalid input", details: result.error.flatten().fieldErrors },
+			{ error: "输入无效", details: result.error.flatten().fieldErrors },
 			{ status: 400 },
 		);
 	}

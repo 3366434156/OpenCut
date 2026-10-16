@@ -34,7 +34,7 @@ export function Onboarding() {
 			case 2:
 				return "🦋 Have fun testing!";
 			default:
-				return "OpenCut Onboarding";
+				return "OpenCut 新手引导";
 		}
 	};
 

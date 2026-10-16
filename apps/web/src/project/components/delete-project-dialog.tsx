@@ -38,14 +38,14 @@ export function DeleteProjectDialog({
 					<DialogTitle>
 						{singleName ? (
 							<>
-								{"Delete '"}
+								{"删除「"}
 								<span className="inline-block max-w-[300px] truncate align-bottom">
 									{singleName}
 								</span>
-								{"'?"}
+								{"」？"}
 							</>
 						) : (
-							`Delete ${count} projects?`
+							`删除 ${count} 个项目？`
 						)}
 					</DialogTitle>
 				</DialogHeader>

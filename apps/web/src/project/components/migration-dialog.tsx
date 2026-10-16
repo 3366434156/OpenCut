@@ -17,8 +17,8 @@ export function MigrationDialog() {
 	if (!migrationState.isMigrating) return null;
 
 	const title = migrationState.projectName
-		? "Updating project"
-		: "Updating projects";
+		? "正在更新项目"
+		: "正在更新多个项目";
 	const description = migrationState.projectName
 		? `正在把「${migrationState.projectName}」从 v${migrationState.fromVersion} 升级到 v${migrationState.toVersion}`
 		: `正在把项目从 v${migrationState.fromVersion} 升级到 v${migrationState.toVersion}`;

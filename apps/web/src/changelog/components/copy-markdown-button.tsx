@@ -92,7 +92,7 @@ export function CopyMarkdownButton({
 			) : (
 				<ClipboardIcon className="size-4" />
 			)}
-			{copied ? "Copied!" : "Copy markdown"}
+			{copied ? "已复制！" : "复制为 Markdown"}
 		</Button>
 	);
 }
