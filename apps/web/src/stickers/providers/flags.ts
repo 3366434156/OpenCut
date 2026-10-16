@@ -5,7 +5,7 @@ import type {
 	StickerProvider,
 	StickerSearchResult,
 } from "../types";
-import { REGIONS, REGION_GROUPS } from "./countries-data";
+import { REGIONS, REGION_GROUPS, REGION_GROUP_LABELS } from "./countries-data";
 import type { CountryRecord, RegionId } from "./countries-data";
 
 const FLAGS_PROVIDER_ID = "flags";
@@ -46,7 +46,7 @@ function toStickerItem({ country }: { country: CountryRecord }): StickerItem {
 			providerValue: normalizedCode,
 		}),
 		provider: FLAGS_PROVIDER_ID,
-		name: country.name,
+		name: country.nameZh ?? country.name,
 		previewUrl: buildFlagUrl({ code: normalizedCode }),
 		metadata: {
 			code: normalizedCode,
@@ -83,20 +83,30 @@ export function resolveQueryToRegions({
 		return new Set(group);
 	}
 
+	// 中文分组名（欧洲 / 亚洲 / 非洲 / 美洲）
+	const translatedGroupKey = Object.keys(REGION_GROUP_LABELS).find(
+		(key) => REGION_GROUP_LABELS[key] === query,
+	);
+	const translatedGroup = translatedGroupKey
+		? REGION_GROUPS[translatedGroupKey]
+		: undefined;
+	if (translatedGroup) {
+		return new Set(translatedGroup);
+	}
+
 	const matched = findMatchingRegions({ query });
 	return matched.length > 0 ? new Set(matched.map((r) => r.id)) : null;
 }
 
 export function getRegionLabel({ query }: { query: string }): string {
-	if (REGION_GROUPS[query]) {
-		return query
-			.split(" ")
-			.map((w) => w.charAt(0).toUpperCase() + w.slice(1))
-			.join(" ");
+	const groupLabel = REGION_GROUP_LABELS[query];
+	if (groupLabel) {
+		return groupLabel;
 	}
 
-	const matched = findMatchingRegions({ query });
-	return matched[0]?.id ?? query;
+	const matched = findMatchingRegions({ query })[0];
+	// 每个地区都带 label（中文名），没有命中就回落到原始查询词
+	return matched ? matched.label : query;
 }
 
 function filterCountriesByQuery({
@@ -118,8 +128,13 @@ function filterCountriesByQuery({
 
 	return countries.filter((country) => {
 		const normalizedName = country.name.toLowerCase();
+		const normalizedNameZh = country.nameZh?.toLowerCase() ?? "";
 		const normalizedCode = country.code.toLowerCase();
-		return normalizedName.includes(query) || normalizedCode.includes(query);
+		return (
+			normalizedName.includes(query) ||
+			normalizedNameZh.includes(query) ||
+			normalizedCode.includes(query)
+		);
 	});
 }
 

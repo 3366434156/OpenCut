@@ -193,10 +193,10 @@ export default function BrandPage() {
 					<h2 className="font-semibold text-lg">禁止行为</h2>
 					<ul className="text-muted-foreground text-base flex flex-col gap-2 leading-relaxed">
 						{[
-							"Using OpenCut in the name of your product, service, or domain.",
-							"Implying that OpenCut made, sponsors, or endorses your work.",
-							"Using the logo or name on merchandise or commercial marketing.",
-							"Modifying the marks.",
+							"把你的产品、服务或域名命名为 OpenCut。",
+							"暗示 OpenCut 制作、赞助或认可你的作品。",
+							"在周边商品或商业营销中使用标志或名称。",
+							"修改这些标识。",
 						].map((item) => (
 							<li key={item} className="flex gap-2">
 								<span className="mt-0.5 shrink-0">-</span>

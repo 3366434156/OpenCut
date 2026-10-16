@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { ReactMarkdownWrapper } from "@/components/ui/react-markdown-wrapper";
 import { cn } from "@/utils/ui";
 
-const LAST_UPDATED = "February 25, 2026";
+const LAST_UPDATED = "2026年2月25日";
 
 type StatusType = "complete" | "pending" | "default" | "info";
 
@@ -24,7 +24,7 @@ const roadmapItems: RoadmapItem[] = [
 	{
 		title: "起点",
 		description:
-			"This is where it all started. Repository created, initial project structure, and the vision for a free, open-source video editor. [Check out the first tweet](https://x.com/mazeincoding/status/1936706642512388188) to see where it started.",
+			"一切从这里开始：创建仓库、搭出最初的项目结构，以及做一个免费开源视频剪辑器的构想。[看看第一条推文](https://x.com/mazeincoding/status/1936706642512388188)，了解它的起点。",
 		status: {
 			text: "已完成",
 			type: "complete",
@@ -33,7 +33,7 @@ const roadmapItems: RoadmapItem[] = [
 	{
 		title: "核心界面",
 		description:
-			"Build the foundation - main layout, header, sidebar, timeline container, and basic component structure. Not all functionality yet, but the UI framework that everything else builds on.",
+			"打好基础：主布局、顶部栏、侧边栏、时间线容器和基础组件结构。此时功能还不完整，但这是后续一切所依赖的界面框架。",
 		status: {
 			text: "已完成",
 			type: "complete",
@@ -42,7 +42,7 @@ const roadmapItems: RoadmapItem[] = [
 	{
 		title: "核心功能",
 		description:
-			"Everything that makes a video editor **useful**. Timeline interactivity, storage, effects, transitions, etc.",
+			"让视频剪辑器真正**好用**的一切：时间线交互、存储、特效、转场等等。",
 		status: {
 			text: "进行中",
 			type: "pending",
@@ -51,7 +51,7 @@ const roadmapItems: RoadmapItem[] = [
 	{
 		title: "原生应用（移动端/桌面端）",
 		description:
-			"Native OpenCut apps for Mac, Windows, Linux, and iOS/Android.",
+			"Mac、Windows、Linux 与 iOS/Android 平台的原生 OpenCut 应用。",
 		status: {
 			text: "未开始",
 			type: "default",
@@ -100,9 +100,8 @@ export default function RoadmapPage() {
 				</div>
 				<GitHubContributeSection
 					title="想参与贡献？"
-					description="OpenCut is open source and built by the community. Every contribution,
-          no matter how small, helps us build the best free video editor
-          possible."
+					description="OpenCut 是开源的，由社区共同构建。每一份贡献，无论多小，
+          都在帮我们做出最好的免费视频剪辑器。"
 				/>
 			</div>
 		</BasePage>

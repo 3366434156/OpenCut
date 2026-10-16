@@ -343,7 +343,7 @@ export function TimelineElement({
 	const sourceAudioLabel =
 		element.type === "video"
 			? getSourceAudioActionLabel({ element })
-			: "Extract audio";
+			: "提取音频";
 	const isElementSourceAudioSeparated =
 		element.type === "video" && isSourceAudioSeparated({ element });
 	const hasKeyframes = elementKeyframes.length > 0;
@@ -477,7 +477,7 @@ export function TimelineElement({
 								toggleElementExpanded(element.id);
 							}}
 						>
-							{isExpanded ? "Collapse keyframes" : "Expand keyframes"}
+							{isExpanded ? "收起关键帧" : "展开关键帧"}
 						</ContextMenuItem>
 					)}
 					{selectedElements.length === 1 && hasMediaId(element) && (
@@ -1270,7 +1270,7 @@ function DeleteMenuItem({
 		>
 			{isMultipleSelected && isCurrentElementSelected
 				? `删除 ${selectedCount} 个元素`
-				: `Delete ${elementType === "text" ? "text" : "clip"}`}
+				: `删除${elementType === "text" ? "文本" : "片段"}`}
 		</ActionMenuItem>
 	);
 }

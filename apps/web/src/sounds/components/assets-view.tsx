@@ -550,7 +550,7 @@ function AudioItem({ sound, isPlaying, onPlay }: AudioItemProps) {
 							: "text-muted-foreground"
 					}`}
 					onClick={handleSaveClick}
-					title={isSaved ? "Remove from saved" : "Save sound"}
+					title={isSaved ? "取消收藏" : "收藏音效"}
 				>
 					<HugeiconsIcon
 						icon={FavouriteIcon}

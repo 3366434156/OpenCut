@@ -384,12 +384,12 @@ export class ProjectManager {
 				toast.error(
 					missingProjectIds.length === 1
 						? "Project not found"
-						: "Projects not found",
+						: "未找到项目",
 					{
 						description:
 							missingProjectIds.length === 1
 								? "Please try again"
-								: "Some projects could not be found",
+								: "部分项目未找到",
 					},
 				);
 				throw new Error(`Projects not found: ${missingProjectIds.join(", ")}`);

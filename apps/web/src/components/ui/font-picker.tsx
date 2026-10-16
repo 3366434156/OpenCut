@@ -98,7 +98,7 @@ export function FontPicker({
 						<HugeiconsIcon icon={TextIcon} />
 					</span>
 					<span className="truncate" style={{ fontFamily: defaultValue }}>
-						{defaultValue ?? "Select a font"}
+						{defaultValue ?? "选择字体"}
 					</span>
 				</div>
 				<ChevronDown className="size-3 shrink-0 opacity-50" />

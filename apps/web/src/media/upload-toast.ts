@@ -6,7 +6,7 @@ export interface MediaUploadToastResult {
 }
 
 function getAssetLabel({ count }: { count: number }): string {
-	return count === 1 ? "media asset" : "media assets";
+	return count === 1 ? "媒体素材" : "媒体素材";
 }
 
 function waitForNextPaint(): Promise<void> {
@@ -29,20 +29,20 @@ export async function showMediaUploadToast<T extends MediaUploadToastResult>({
 		await waitForNextPaint();
 		return run();
 	}, {
-		loading: `Uploading ${getAssetLabel({ count: filesCount })}...`,
+		loading: `正在上传${getAssetLabel({ count: filesCount })}……`,
 		success: ({ uploadedCount, assetNames }) => {
 			if (uploadedCount === 1) {
 				const assetName = assetNames?.[0];
 				return assetName
 					? `${assetName} 已上传`
-					: "1 media asset has been uploaded";
+					: "已上传 1 个媒体素材";
 			}
 
 			if (uploadedCount > 1) {
 				return `已上传 ${uploadedCount} 个媒体素材`;
 			}
 
-			return "No media assets were uploaded";
+			return "没有上传任何媒体素材";
 		},
 		error: `${getAssetLabel({ count: filesCount })}上传失败`,
 	});

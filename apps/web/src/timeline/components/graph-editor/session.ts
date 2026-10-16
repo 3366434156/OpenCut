@@ -430,7 +430,7 @@ function resolveSegmentForOption({
 		return {
 			reason: "selected-segment-is-flat",
 			message:
-				"Cannot edit a segment where both keyframes are at the same time.",
+				"无法编辑两个关键帧处于同一时间的曲线段。",
 		};
 	}
 
@@ -597,7 +597,7 @@ export function resolveGraphEditorSelectionState({
 		status: "ready",
 		message:
 			segments.length === 1
-				? "Edit graph"
+				? "编辑曲线"
 				: `编辑 ${segments.length} 个属性的曲线`,
 		componentOptions,
 		activeComponentKey,

@@ -11,7 +11,7 @@ export const EXTERNAL_TOOLS: ExternalTool[] = [
 	{
 		name: "Marble",
 		description:
-			"Modern headless CMS for content management and the blog for OpenCut",
+			"现代化的无头 CMS，用于内容管理，同时也是 OpenCut 的博客平台。",
 		url: "https://marblecms.com?utm_source=opencut",
 		icon: OcMarbleIcon,
 	},
